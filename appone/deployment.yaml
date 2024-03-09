@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devapp1
+  labels:
+    app: devapp1
+  name: devapp1
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: devapp1
+  template:
+    metadata:
+      labels:
+        app: devapp1
+    spec:
+      containers:
+      - image: nginx:1.25.1
+        name: devapp1
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

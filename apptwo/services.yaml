@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: devapp2
+  labels:
+    app: devapp2
+  name: devapp2
+spec:
+  selector:
+    app: devapp2
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
