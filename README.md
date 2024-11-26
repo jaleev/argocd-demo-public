@@ -7,11 +7,11 @@
 ```bash
 # Non HA installation
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.1/manifests/install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.13.1/manifests/install.yaml
 
 # HA installation
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.1/manifests/ha/install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.13.1/manifests/ha/install.yaml
 ```
 
 > Get the password
@@ -83,12 +83,12 @@ http://<workernode_ip>:32400
 https://github.com/argoproj/argo-cd/releases/latest
 
 # For linux based OS I use below link to download
-wget https://github.com/argoproj/argo-cd/releases/download/v2.10.1/argocd-linux-amd64
+wget https://github.com/argoproj/argo-cd/releases/download/v2.13.1/argocd-linux-amd64
 sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 rm argocd-linux-amd64
 
 # Ue below link to download onto Wn 11
-https://github.com/argoproj/argo-cd/releases/download/v2.10.1/argocd-windows-amd64.exe
+https://github.com/argoproj/argo-cd/releases/download/v2.13.1/argocd-windows-amd64.exe
 
 ```
 > Health status for DevAppOne
